@@ -14,6 +14,9 @@ This project aims to construct and analyze a **Gene Regulatory Network (GRN)** f
 - Identification of TF-target relationships
 - Graph construction using NetworkX
 - Visualization and centrality analysis
+### Dataset
+  we used https://humantfs.ccbr.utoronto.ca/ site for downloading the database of human transcription factors, and saving the name of all transcription factors in a 
+  txt file
 
 ## 🛠️ Installation
 
