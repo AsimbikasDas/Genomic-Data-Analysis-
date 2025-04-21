@@ -35,9 +35,12 @@ This project focuses on constructing a **Gene Regulatory Network** from gene exp
 
 ---
 
-## 🧰 Requirements
+## 🛠️ Installation
 
-Install the dependencies using:
+Instructions to install and run the project.
 
+Netowork.py is the main file for constructing the gene regulatory network.
+For using it use the following commands
 ```bash
-pip install pandas numpy networkx matplotlib seaborn
+from Network import *
+
