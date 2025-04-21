@@ -1,24 +1,43 @@
-# Project Title
+# 🧬 Gene Regulatory Network (GRN) Construction & Analysis
 
-This project aims to construct and analyze a **Gene Regulatory Network (GRN)** from gene expression data using transcription factor (TF) interactions. It helps in identifying regulatory relationships between genes and understanding biological pathways.
-## 🚀 Features
+This project focuses on constructing a **Gene Regulatory Network** from gene expression data using known **Human Transcription Factors (TFs)** from [HumanTFs](https://humantfs.ccbr.utoronto.ca/). The GRN is modeled and analyzed using graph theory to uncover potential regulatory interactions between genes.
 
-- From gene expression data, we can find the relation between different types of transcription factors and genes.
-- A diagram of network will be created.
-- Three types of method can be used - Correlation analysis, Linear_Regression and Lasso_Regression
-- This project gives us flexibility to change the thresholds, for choosing positive regulation, and negative regulation.
-## ⚙️ Methods
+---
 
-- Data preprocessing (normalization, filtering)
-- Three methods, correlation analysis, linear regression and lasso regression.
-- Identification of TF-target relationships
-- Graph construction using NetworkX
-- Visualization and centrality analysis
-### Dataset
-  we used https://humantfs.ccbr.utoronto.ca/ site for downloading the database of human transcription factors, and saving the name of all transcription factors in a 
-  txt file
+## 🌐 Dataset
 
-## 🛠️ Installation
+- **Gene Expression Data**: A `.csv` file containing expression levels of genes.
+- **Transcription Factors List**: Downloaded from [HumanTFs Database](https://humantfs.ccbr.utoronto.ca/download.php), which provides a curated list of human TFs and co-TFs.
 
-Instructions to install and run the project.
-The file 
+---
+
+## 🧪 Methodology
+
+1. **Data Preparation**
+   - Load gene expression data.
+   - Normalize and clean data if necessary.
+   - Map genes with known transcription factors using HumanTFs.
+
+2. **Interaction Inference**
+   - Compute pairwise Pearson correlation between transcription factors and target genes.
+   - Apply thresholding to determine significant regulatory links.
+   - Optionally use mutual information or partial correlation for robustness.
+
+3. **Graph Construction**
+   - Construct a **directed graph** using NetworkX where:
+     - Nodes = Genes (TFs and targets)
+     - Edges = Regulatory interactions (from TFs to target genes)
+
+4. **Analysis & Visualization**
+   - Visualize the network using NetworkX and Matplotlib.
+   - Perform centrality analysis to identify key regulators.
+   - Export graph metrics (e.g., degree, betweenness) for biological interpretation.
+
+---
+
+## 🧰 Requirements
+
+Install the dependencies using:
+
+```bash
+pip install pandas numpy networkx matplotlib seaborn
