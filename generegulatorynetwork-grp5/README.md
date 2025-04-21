@@ -63,5 +63,5 @@ This project offers three methods to construct Gene Regulatory Networks (GRNs):
 
 Below is a sample output of the constructed Gene Regulatory Network:
 
-![GRN Example](sample_result.png"Gene Regulatory Network")
+![GRN Example](sample_result.png "Gene Regulatory Network")
 
