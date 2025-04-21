@@ -7,6 +7,13 @@ This project aims to construct and analyze a **Gene Regulatory Network (GRN)** f
 - A diagram of network will be created.
 - Three types of method can be used - Correlation analysis, Linear_Regression and Lasso_Regression
 - This project gives us flexibility to change the thresholds, for choosing positive regulation, and negative regulation.
+## ⚙️ Methods
+
+- Data preprocessing (normalization, filtering)
+- Three methods, correlation analysis, linear regression and lasso regression.
+- Identification of TF-target relationships
+- Graph construction using NetworkX
+- Visualization and centrality analysis
 
 ## 🛠️ Installation
 
