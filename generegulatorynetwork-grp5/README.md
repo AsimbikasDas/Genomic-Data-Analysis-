@@ -21,3 +21,4 @@ This project aims to construct and analyze a **Gene Regulatory Network (GRN)** f
 ## 🛠️ Installation
 
 Instructions to install and run the project.
+The file 
