@@ -48,4 +48,6 @@ gene.network_one()
 gene.network_two()
 gene.network_three()
 ```
-hi
+network_one() function will create gene regulatory network(GRN) by help of corelation network.
+network_two() function will create gene regulatory network(GRN) by using Linear Regression method.
+network_three() function will create gene regulatory network(GRN) by using Lasso Regression.
