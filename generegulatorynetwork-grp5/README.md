@@ -59,3 +59,9 @@ This project offers three methods to construct Gene Regulatory Networks (GRNs):
 
 - `network_three()`: Constructs the GRN using **Lasso Regression**, which adds L1 regularization to Linear Regression to encourage sparsity and feature selection in regulatory links.
 
+  ## 🖼️ GRN Visualization
+
+Below is a sample output of the constructed Gene Regulatory Network:
+
+![GRN Example](sample_results/network.png "Gene Regulatory Network")
+
