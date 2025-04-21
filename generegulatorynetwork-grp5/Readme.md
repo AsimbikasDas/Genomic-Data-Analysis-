@@ -1,12 +1,12 @@
 # Project Title
 
-A brief description of your project.
-
+This project aims to construct and analyze a **Gene Regulatory Network (GRN)** from gene expression data using transcription factor (TF) interactions. It helps in identifying regulatory relationships between genes and understanding biological pathways.
 ## 🚀 Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- From gene expression data, we can find the relation between different types of transcription factors and genes.
+- A diagram of network will be created.
+- Three types of method can be used - Correlation analysis, Linear_Regression and Lasso_Regression
+- This project gives us flexibility to change the thresholds, for choosing positive regulation, and negative regulation.
 
 ## 🛠️ Installation
 
