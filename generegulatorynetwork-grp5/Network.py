@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
 from sklearn.preprocessing import StandardScaler
+import networkx as nx
+import matplotlib.pyplot as plt
 
 class Gene_Network:
 
@@ -118,7 +120,7 @@ class Gene_Network:
             lasso_genes_pos.append(positive_genes)
             lasso_genes_neg.append(negative_genes)
         self.print_clean(lasso_genes_pos,lasso_genes_neg)
-
+        return lasso_genes_pos, lasso_genes_neg
 
         
     def print_clean(self,pos,neg):
@@ -140,10 +142,61 @@ class Gene_Network:
                 print(f'{j}  ',end = '')
             print()
             print()
-        
-        
-        
+        a = pos
+        b = neg
+        G = nx.DiGraph()
 
+# Add all TFs first
+        tfs = set([group[0] for group in a] + [group[0] for group in b])
+        for tf in tfs:
+            G.add_node(tf, role='TF')
+
+# Add edges from a
+        for group in a:
+            src = group[0]
+            for target in group[1:]:
+                G.add_node(target, role='gene')
+                G.add_edge(src, target, source='a')
+
+# Add edges from b
+        for group in b:
+            src = group[0]
+            for target in group[1:]:
+                G.add_node(target, role='gene')
+                if not G.has_edge(src, target):
+                    G.add_edge(src, target, source='b')
+
+# Separate TFs and genes for shell layout
+        tf_nodes = [n for n, d in G.nodes(data=True) if d['role'] == 'TF']
+        gene_nodes = [n for n, d in G.nodes(data=True) if d['role'] == 'gene']
+        pos = nx.shell_layout(G, [tf_nodes, gene_nodes])
+
+# Node colors
+        node_colors = ['lightblue' if G.nodes[n]['role'] == 'TF' else 'lightcoral' for n in G.nodes()]
+
+# Edge colors
+        edge_colors = []
+        for u, v in G.edges():
+            edge_colors.append('green' if G[u][v].get('source') == 'a' else 'purple')
+
+# Draw clearer plot
+        plt.figure(figsize=(14, 10))
+        nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=1000, edgecolors='black')
+        nx.draw_networkx_labels(G, pos, font_size=9)
+        nx.draw_networkx_edges(G, pos, edge_color=edge_colors, arrows=True, arrowstyle='->', width=2)
+
+# Optional: Legend
+        import matplotlib.patches as mpatches
+        green_patch = mpatches.Patch(color='green', label='Positive regulation')
+        purple_patch = mpatches.Patch(color='purple', label='Negative regulation')
+        blue_patch = mpatches.Patch(color='lightblue', label='Transcription Factor')
+        pink_patch = mpatches.Patch(color='lightcoral', label='Target Gene')
+        plt.legend(handles=[green_patch, purple_patch, blue_patch, pink_patch], loc='upper left')
+
+        plt.title("Clean Gene Regulatory Network", fontsize=14)
+        plt.axis('off')
+        plt.tight_layout()
+        plt.show()
 
 
 
