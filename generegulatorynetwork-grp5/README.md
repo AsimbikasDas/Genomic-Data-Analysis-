@@ -48,6 +48,13 @@ gene.network_one()
 gene.network_two()
 gene.network_three()
 ```
-network_one() function will create gene regulatory network(GRN) by help of corelation network.
-network_two() function will create gene regulatory network(GRN) by using Linear Regression method.
-network_three() function will create gene regulatory network(GRN) by using Lasso Regression.
+## 🧠 GRN Construction Methods
+
+This project offers three methods to construct Gene Regulatory Networks (GRNs):
+
+- `network_one()`: Constructs the GRN using a **correlation-based approach**, identifying gene-gene relationships based on Pearson correlation coefficients.
+
+- `network_two()`: Constructs the GRN using **Linear Regression**, modeling the influence of transcription factors on target gene expression levels.
+
+- `network_three()`: Constructs the GRN using **Lasso Regression**, which adds L1 regularization to Linear Regression to encourage sparsity and feature selection in regulatory links.
+
