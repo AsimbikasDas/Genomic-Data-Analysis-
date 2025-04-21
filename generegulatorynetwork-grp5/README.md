@@ -48,6 +48,7 @@ gene.network_one()
 gene.network_two()
 gene.network_three()
 ```
+tfs.txt file is a must, before running please download it as it contains all the name of the transcription factors, if you want for some other organism use your file, in same format- only names of transcription factors.
 ## 🧠 GRN Construction Methods
 
 This project offers three methods to construct Gene Regulatory Networks (GRNs):
