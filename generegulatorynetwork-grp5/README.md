@@ -54,6 +54,15 @@ gene.network_three()
 ```
 
 Network functions also give us flexibility, to set the threshold values. Try putting threhsold network_one(0.1,-0.1) manually, so that the threshold will be updated, and according to threshold gene relations we will get. If you don't put any threshold, the default, is (0.7, -0.7), for changing it and viewing various patterns of gene network try using it.
+
+
+network_one(positive_threshold, negative_threshold)
+
+network_two(0.3,-0.2)
+
+netork_three(0.1, -0.6)
+
+These are some examples, try using them in this way.
 ## 🧠 GRN Construction Methods
 
 This project offers three methods to construct Gene Regulatory Networks (GRNs):
