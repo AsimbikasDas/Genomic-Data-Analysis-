@@ -38,6 +38,12 @@ This project focuses on constructing a **Gene Regulatory Network** from gene exp
 Instructions to install and run the project.
 
 Netowork.py is the main file for constructing the gene regulatory network.
+
+
+tfs.txt file is a must, before running please download it as it contains all the name of the transcription factors, if you want for some other organism use your file, in same format- only names of transcription factors.
+
+
+
 For using it use the following commands
 ```bash
 from Network import *
@@ -46,8 +52,8 @@ gene.network_one()
 gene.network_two()
 gene.network_three()
 ```
-tfs.txt file is a must, before running please download it as it contains all the name of the transcription factors, if you want for some other organism use your file, in same format- only names of transcription factors.
-network functions also give us flexibility, to set the threshold values. Try putting threhsold network_one(0.1,-0.1) manually, so that the threshold will be updated, and according to threshold gene relations we will get. If you don't put any threshold, the default, is (0.7, -0.7), for changing it and viewing various patterns of gene network try using it.
+
+Network functions also give us flexibility, to set the threshold values. Try putting threhsold network_one(0.1,-0.1) manually, so that the threshold will be updated, and according to threshold gene relations we will get. If you don't put any threshold, the default, is (0.7, -0.7), for changing it and viewing various patterns of gene network try using it.
 ## 🧠 GRN Construction Methods
 
 This project offers three methods to construct Gene Regulatory Networks (GRNs):
