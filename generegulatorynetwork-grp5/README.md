@@ -19,9 +19,7 @@ This project focuses on constructing a **Gene Regulatory Network** from gene exp
    - Map genes with known transcription factors using HumanTFs.
 
 2. **Interaction Inference**
-   - Compute pairwise Pearson correlation between transcription factors and target genes.
-   - Apply thresholding to determine significant regulatory links.
-   - Optionally use mutual information or partial correlation for robustness.
+   - Finding the relating between genes and transciption factors using pearson coefficient, Linear Regression and Lassor Regression.
 
 3. **Graph Construction**
    - Construct a **directed graph** using NetworkX where:
@@ -49,6 +47,7 @@ gene.network_two()
 gene.network_three()
 ```
 tfs.txt file is a must, before running please download it as it contains all the name of the transcription factors, if you want for some other organism use your file, in same format- only names of transcription factors.
+network functions also give us flexibility, to set the threshold values. Try putting threhsold network_one(0.1,-0.1) manually, so that the threshold will be updated, and according to threshold gene relations we will get. If you don't put any threshold, the default, is (0.7, -0.7), for changing it and viewing various patterns of gene network try using it.
 ## 🧠 GRN Construction Methods
 
 This project offers three methods to construct Gene Regulatory Networks (GRNs):
