@@ -41,7 +41,7 @@ source venv/bin/activate
 
 Once activated, your terminal prompt will change to indicate that you're working within the virtual environment.​
 
-3. Install Dependencies
+<h3>3. Install Dependencies</h3>
 With the virtual environment activated, install the required packages:​
 
 ```
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 This command installs all the dependencies specified in the requirements.txt file.​
 
-4. Run the Flask Application
+<h3>4. Run the Flask Application</h3>
 Start the Flask development server:
 
 ```
@@ -68,6 +68,8 @@ GenomeLREP1/
 ├── README.md
 └── .idea/
 ```
+
+<h2><b>A Guide to use our website:</b></h2>
 
 ![WhatsApp Image 2025-04-24 at 14 17 45_5097e31e](https://github.com/user-attachments/assets/f07bbbeb-5301-4b0d-a872-54affd1bed2a)
 
